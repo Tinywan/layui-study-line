@@ -20,4 +20,4 @@
 
 +  [layer.photos(options) - 相册层](demo01/index-6.html) 
 
-+  [分页模块文档 - layui.laypage](demo01/index-6.html) 
++  [分页模块文档 - layui.laypage](demo01/index-7.html) 
