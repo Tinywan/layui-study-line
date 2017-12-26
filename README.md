@@ -1,4 +1,4 @@
-[学习文档](http://github.tinywan.com/go/)
+[快速预览](http://github.tinywan.com/layui-study-line/)
 
 
 
