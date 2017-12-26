@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>模块化的用法（推荐）</title>
+    <link rel="stylesheet" href="../res/layui/css/layui.css">
+</head>
+<body>
+模块化的用法（推荐）
+<!-- 你的HTML代码 -->
+<script src="../res/layui/layui.js"></script>
+<script>
+    layui.config({
+        base: '../res/mods/' //我自定义的index.js文件
+    }).use('index'); //加载入口
+</script>
+</body>
+</html>
