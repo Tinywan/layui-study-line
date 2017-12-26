@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>定义模块</title>
+    <link rel="stylesheet" href="../res/layui/css/layui.css">
+</head>
+<body>
+<h1><div class="layui-main layui-bg-red">
+    扩展一个 layui 模块
+</div></h1>
+
+<!-- 你的HTML代码 -->
+<script src="../res/layui/layui.js"></script>
+<script>
+    // 1、config的设置是全局的
+    layui.config({
+        base: '../res/mods/' //假设这是你存放拓展模块的根目录
+    }).extend({ //设定模块别名
+        mymod: 'mymod' //如果 mymod.js 是在根目录，也可以不用设定别名
+//        ,mod1: 'admin/mod1' //相对于上述 base 目录的子目录
+    });
+
+    //2、使用拓展模块
+    layui.use(['mymod'], function(){
+        var mymod = layui.mymod;
+        mymod.hello('World!'); //弹出 Hello World!
+    });
+</script>
+</body>
+</html>

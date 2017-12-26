@@ -8,6 +8,19 @@
 </head>
 <body>
 <h1>底层方法--定义模块</h1>
+<div class="layui-main layui-circle layui-bg-red" style="background-color: #0C0C0C;">layui-main</div>
+<div class="layui-tab">
+    <ul class="layui-tab-title">
+        <li class="layui-this">标题一</li>
+        <li>标题二</li>
+        <li>标题三</li>
+    </ul>
+    <div class="layui-tab-content">
+        <div class="layui-tab-item layui-show">内容1</div>
+        <div class="layui-tab-item">内容2</div>
+        <div class="layui-tab-item">内容3</div>
+    </div>
+</div>
 <!-- 你的HTML代码 -->
 <script src="../res/layui/layui.js"></script>
 <script>
@@ -19,7 +32,7 @@
         var layer = layui.layer;
         layer.msg('当前设备系统为：'+device.os);
         if(device.weixin){
-            layer.msg('我是微信呀！');
+            layer.msg('我是微信呀！当前设备系统为：'+device.os);
         }
         console.log(device);
         //do something
