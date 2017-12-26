@@ -18,6 +18,10 @@
         var device = layui.device();
         var layer = layui.layer;
         layer.msg('当前设备系统为：'+device.os);
+        if(device.weixin){
+            layer.msg('我是微信呀！');
+        }
+        console.log(device);
         //do something
     });
 </script>
