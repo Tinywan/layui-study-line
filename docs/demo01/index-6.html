@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>layer.photos(options) - 相册层</title>
+    <link rel="stylesheet" href="../res/layui/css/layui.css">
+</head>
+<body>
+<div class="layui-main">
+    <h1>layer.photos(options) - 相册层</h1>
+<div id="layer-photos-demo" class="layer-photos-demo">
+    <img layer-pid="图片id，可以不写" layer-src="http://oss.tinywan.com//uploads/article/5a3f290bc64461.png" src="http://oss.tinywan.com//uploads/article/5a3f290bc64461.png?x-oss-process=image/resize,m_fixed,h_100,w_180" alt="图片名">
+    <img layer-pid="图片id，可以不写" layer-src="http://oss.tinywan.com//uploads/article/5a3c5770a8c97.png" src="http://oss.tinywan.com//uploads/article/5a3c5770a8c97.png?x-oss-process=image/resize,m_fixed,h_100,w_180" alt="图片名">
+    <img layer-pid="图片id，可以不写" layer-src="http://oss.tinywan.com//uploads/article/a212f0aagy1fmpgr.jpg" src="http://oss.tinywan.com//uploads/article/a212f0aagy1fmpgr.jpg?x-oss-process=image/resize,m_fixed,h_100,w_180" alt="图片名">
+    <img layer-pid="图片id，可以不写" layer-src="http://oss.tinywan.com//uploads/article/5a3f290bc64461.png" src="http://oss.tinywan.com//uploads/article/5a3f290bc64461.png?x-oss-process=image/resize,m_fixed,h_100,w_180" alt="图片名">
+</div>
+</div>
+<script src="../res/layui/layui.js"></script>
+<script>
+    // 主动加载jquery模块
+    layui.use(['jquery', 'layer'], function () {
+        var $ = layui.$,
+            layer = layui.layer;
+        //调用示例
+        layer.photos({
+            photos: '#layer-photos-demo'
+            ,anim: 5, //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+            tab: function(pic, layero){
+                console.log(pic) //当前图片的一些信息
+            }
+        });
+    });
+
+</script>
+</body>
+</html>

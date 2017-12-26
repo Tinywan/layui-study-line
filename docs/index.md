@@ -13,3 +13,11 @@
 +  [扩展一个 layui 模块](demo01/index-3.html)
    > 1、`layui.js` 的两个底层方法：一个用于定义模块的 `layui.define()`，一个加载模块的 `layui.use()`   
      2、[官方文档http://www.layui.com/doc/base/modules.html](http://www.layui.com/doc/base/modules.html)
+
++  [如何使用内部jQuery？](demo01/index-4.html) 
+
++  [layui 实用干货和常见问题的处理](http://fly.layui.com/jie/5366/) 
+
++  [弹层组件文档 - layui.layer](demo01/index-5.html) 
+
++  [layer.photos(options) - 相册层](demo01/index-6.html) 

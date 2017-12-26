@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>如何使用内部jQuery？</title>
+    <link rel="stylesheet" href="../res/layui/css/layui.css">
+</head>
+<body>
+<h1>
+    <div class="layui-main layui-bg-gray">
+        如何使用内部jQuery？
+    </div>
+    <div class="layui-col-md-offset5 add-jquery">++</div>
+    <div class="layui-col-md-offset5 add-jquery-plus">+===</div>
+</h1>
+
+<!-- 你的HTML代码 -->
+<script src="../res/layui/layui.js"></script>
+<script>
+    // 主动加载jquery模块
+    layui.use(['jquery', 'layer'], function () {
+        var $ = layui.$,
+            layer = layui.layer;
+        //后面就跟你平时使用jQuery一样
+        $('body').append('hello jquery');
+        $('.add-jquery').append('我是Jquery 添加的');
+//        layer.msg('主动加载jquery模块!');
+        //页面一打开就执行弹层
+        layer.ready(function(){
+            layer.msg('很高兴一开场就见到你');
+        });
+    });
+//
+    //如果内置的模块本身是依赖jquery，你无需去use jquery，所以上面的写法其实可以是：
+    layui.use('layer',function () {
+        var $ = layui.$,//由于layer弹层依赖jQuery，所以可以直接得到
+            layer = layui.layer;
+        $('.add-jquery-plus').append('如果内置的模块本身是依赖jquery，你无需去use jquery，所以上面的写法其实可以是：');
+    })
+
+</script>
+</body>
+</html>
